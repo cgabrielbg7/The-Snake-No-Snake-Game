@@ -1,6 +1,8 @@
 import styled from '@emotion/styled';
 import { useState, useEffect } from 'react';
 
+
+//Board Style
 const Box = styled.div`
   border: 1px solid black;
   display: flex;
@@ -16,8 +18,10 @@ const Square = styled.div`
   background-color: ${(props) => props.color}
 `;
 
+//Snake Set
 const randomPosition = () => Math.floor(Math.random() * 399);
 
+//Board + Snake
 const Board = ({ size }) => {
   const [snakePosition, setSnakePosition] = useState(360);
   const [foodPosition, setFoodPosition] = useState(randomPosition);
@@ -74,11 +78,3 @@ const Board = ({ size }) => {
 };
 
 export default Board;
-
-/*
-onKeyDown={event => {
-                  if (event.key === 'Enter') {
-                    validate();
-                  }
-                }}
-*/
